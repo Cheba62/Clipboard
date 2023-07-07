@@ -59,13 +59,13 @@ namespace TaoOfLeo.Clipboard
 		protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
 		{
 			var rootFrame = Window.Current.Content as Frame;
-			if (rootFrame == null)
+			if (rootFrame == null
 				Window.Current.Content = rootFrame = new Frame();
 
 			if (!rootFrame.Navigate(typeof(ShareTarget), args.ShareOperation))
-				rootFrame.Navigate(typeof(MainPage));
+				rootFrame.Navigate(typeof(Mainage));
 
-			Window.Current.Activate();
+ent.Activate();
 		}
 	}
 }
